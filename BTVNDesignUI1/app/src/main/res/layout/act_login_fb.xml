@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_fb1"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/d_20">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:hint="@string/email_or_phone"
+        android:paddingStart="@dimen/d_15"
+        android:paddingTop="@dimen/d_10"
+        android:paddingBottom="@dimen/d_10" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d_01"
+        android:background="@color/colorWhite"
+        android:hint="@string/password"
+        android:paddingStart="@dimen/d_15"
+        android:paddingTop="@dimen/d_10"
+        android:paddingBottom="@dimen/d_10" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d_30"
+        android:background="#33FFFFFF"
+        android:text="Log In"
+        android:textSize="@dimen/d_20"
+        android:textColor="@color/colorWhite"
+        android:textAllCaps="false"
+        android:paddingTop="@dimen/d_10"
+        android:paddingBottom="@dimen/d_10" />
+
+</LinearLayout>
