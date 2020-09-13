@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/d_20"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:text="Utility"
+        android:textSize="@dimen/d_40"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginTop="@dimen/d_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone!"
+        android:textSize="@dimen/d_18"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edt_phone"
+        android:background="@color/colorPrimary"
+        android:hint="XXX"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/d_10"
+        android:paddingBottom="@dimen/d_10"
+        android:layout_marginTop="@dimen/d_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/bt_phone"
+        android:background="@color/colorPrimary"
+        android:hint="Call"
+        android:textSize="@dimen/d_20"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/d_10"
+        android:paddingBottom="@dimen/d_10"
+        android:layout_marginTop="@dimen/d_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

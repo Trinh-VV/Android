@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingHorizontal="80dp"
+
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/bt_toast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="@dimen/d_20"
+        android:text="Show Toast"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/d_20" />
+
+    <Button
+        android:id="@+id/bt_show_animal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginTop="@dimen/d_20"
+        android:background="@color/colorPrimary"
+        android:text="Show Animal"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/d_20" />
+
+    <Button
+        android:id="@+id/bt_alert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d_20"
+        android:background="@color/colorPrimary"
+        android:padding="@dimen/d_20"
+        android:text="Show Alert"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/d_20" />
+
+</LinearLayout>

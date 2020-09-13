@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <integer-array name="photo_arr">
+
+        <item>@drawable/ic_cat</item>
+        <item>@drawable/ic_dog</item>
+        <item>@drawable/ic_dolphin</item>
+        <item>@drawable/ic_fish</item>
+        <item>@drawable/ic_meo</item>
+        <item>@drawable/ic_penguin</item>
+    </integer-array>
+
+    <string-array name="name_arr">
+        <item>cat</item>
+        <item>dog</item>
+        <item>dolphin</item>
+        <item>fish</item>
+        <item>meo</item>
+        <item>penguin</item>
+    </string-array>
+
+</resources>
