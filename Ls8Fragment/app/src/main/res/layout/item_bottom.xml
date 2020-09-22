@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_gravity="bottom"
+    android:layout_height="@dimen/d_64"
+    android:elevation="5dp"
+    android:background="@color/colorYellow"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/ln_home"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+        <ImageView
+            android:src="@drawable/ic_home"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Home"/>
+
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/ln_list"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+        <ImageView
+            android:src="@drawable/ic_list"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="List story"/>
+
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/ln_profile"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+        <ImageView
+            android:src="@drawable/ic_profile"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Profile"/>
+
+</LinearLayout>
+
+
+    </LinearLayout>
