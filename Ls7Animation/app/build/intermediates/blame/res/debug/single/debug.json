@@ -1,0 +1,54 @@
+[
+    {
+        "merged": "I:\\ANDROID\\INCLASS\\Ls7Animation\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_2.png.flat",
+        "source": "I:\\ANDROID\\INCLASS\\Ls7Animation\\app\\src\\main\\res\\drawable\\ic_2.png"
+    },
+    {
+        "merged": "I:\\ANDROID\\INCLASS\\Ls7Animation\\app\\build\\intermediates\\res\\merged\\debug\\anim_anim_card.xml.flat",
+        "source": "I:\\ANDROID\\INCLASS\\Ls7Animation\\app\\src\\main\\res\\anim\\anim_card.xml"
+    },
+    {
+        "merged": "I:\\ANDROID\\INCLASS\\Ls7Animation\\app\\build\\intermediates\\res\\merged\\debug\\anim_anim_up.xml.flat",
+        "source": "I:\\ANDROID\\INCLASS\\Ls7Animation\\app\\src\\main\\res\\anim\\anim_up.xml"
+    },
+    {
+        "merged": "I:\\ANDROID\\INCLASS\\Ls7Animation\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_1.png.flat",
+        "source": "I:\\ANDROID\\INCLASS\\Ls7Animation\\app\\src\\main\\res\\drawable\\ic_1.png"
+    },
+    {
+        "merged": "I:\\ANDROID\\INCLASS\\Ls7Animation\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_3.png.flat",
+        "source": "I:\\ANDROID\\INCLASS\\Ls7Animation\\app\\src\\main\\res\\drawable\\ic_3.png"
+    },
+    {
+        "merged": "I:\\ANDROID\\INCLASS\\Ls7Animation\\app\\build\\intermediates\\res\\merged\\debug\\anim_anim_alpha.xml.flat",
+        "source": "I:\\ANDROID\\INCLASS\\Ls7Animation\\app\\src\\main\\res\\anim\\anim_alpha.xml"
+    },
+    {
+        "merged": "I:\\ANDROID\\INCLASS\\Ls7Animation\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_nen.png.flat",
+        "source": "I:\\ANDROID\\INCLASS\\Ls7Animation\\app\\src\\main\\res\\drawable\\ic_nen.png"
+    },
+    {
+        "merged": "I:\\ANDROID\\INCLASS\\Ls7Animation\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "I:\\ANDROID\\INCLASS\\Ls7Animation\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "I:\\ANDROID\\INCLASS\\Ls7Animation\\app\\build\\intermediates\\res\\merged\\debug\\anim_anim_scale.xml.flat",
+        "source": "I:\\ANDROID\\INCLASS\\Ls7Animation\\app\\src\\main\\res\\anim\\anim_scale.xml"
+    },
+    {
+        "merged": "I:\\ANDROID\\INCLASS\\Ls7Animation\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_1.jpg.flat",
+        "source": "I:\\ANDROID\\INCLASS\\Ls7Animation\\app\\src\\main\\res\\drawable\\bg_1.jpg"
+    },
+    {
+        "merged": "I:\\ANDROID\\INCLASS\\Ls7Animation\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_lv_pic.xml.flat",
+        "source": "I:\\ANDROID\\INCLASS\\Ls7Animation\\app\\src\\main\\res\\drawable\\bg_lv_pic.xml"
+    },
+    {
+        "merged": "I:\\ANDROID\\INCLASS\\Ls7Animation\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher.png.flat",
+        "source": "I:\\ANDROID\\INCLASS\\Ls7Animation\\app\\src\\main\\res\\drawable\\ic_launcher.png"
+    },
+    {
+        "merged": "I:\\ANDROID\\INCLASS\\Ls7Animation\\app\\build\\intermediates\\res\\merged\\debug\\anim_anim_down.xml.flat",
+        "source": "I:\\ANDROID\\INCLASS\\Ls7Animation\\app\\src\\main\\res\\anim\\anim_down.xml"
+    }
+]
