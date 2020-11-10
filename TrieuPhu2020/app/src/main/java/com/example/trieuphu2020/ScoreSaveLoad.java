@@ -12,20 +12,20 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class ScoreSetGet {
+public final class ScoreSaveLoad {
     public static final String PREF_FILE_NAME = "pref_share";
     public static final String KEY_SHARE = "KEY_SHARE";
     private static final String LIST_KEY = "LIST_KEY";
-    private static ScoreSetGet instance;
+    private static ScoreSaveLoad instance;
     List<User> arrayItems;
 
-    private ScoreSetGet() {
+    private ScoreSaveLoad() {
         //for singleton
     }
 
-    public static ScoreSetGet getInstance() {
+    public static ScoreSaveLoad getInstance() {
         if (instance == null) {
-            instance = new ScoreSetGet();
+            instance = new ScoreSaveLoad();
         }
         return instance;
     }
@@ -54,30 +54,4 @@ public final class ScoreSetGet {
         }
         return arrayItems;
     }
-
-//    public void savePref(String key, String value) {
-//        SharedPreferences pref = App.getInstance()
-//                .getSharedPreferences(PREF_FILE_NAME, Context.MODE_PRIVATE);
-//        pref.edit().putString(key, value).apply();
-//    }
-//
-//    public String getPref(String key) {
-//        return getPref(key, false);
-//    }
-//
-//    public void clearPref(String key) {
-//        SharedPreferences pref = App.getInstance()
-//                .getSharedPreferences(PREF_FILE_NAME, Context.MODE_PRIVATE);
-//        pref.edit().remove(key).apply();
-//    }
-//
-//    public String getPref(String key, boolean isDelete) {
-//        SharedPreferences pref = App.getInstance()
-//                .getSharedPreferences(PREF_FILE_NAME, Context.MODE_PRIVATE);
-//        String value = pref.getString(key, null);
-//        if (isDelete) {
-//            pref.edit().remove(key).apply();
-//        }
-//        return value;
-//    }
 }

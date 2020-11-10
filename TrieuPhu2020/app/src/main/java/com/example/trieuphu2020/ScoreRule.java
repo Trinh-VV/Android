@@ -3,7 +3,17 @@ package com.example.trieuphu2020;
 import java.text.NumberFormat;
 import java.util.Currency;
 
-public class GetScore {
+public class ScoreRule {
+
+    private static ScoreRule instance;
+
+
+    public static ScoreRule getInstance() {
+        if (instance == null) {
+            instance = new ScoreRule();
+        }
+        return instance;
+    }
 
     public String getScore(int level) {
         String score = "";

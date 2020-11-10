@@ -18,8 +18,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.trieuphu2020.R;
-import com.example.trieuphu2020.ScoreSetGet;
-import com.example.trieuphu2020.common.MTask;
+import com.example.trieuphu2020.ScoreRule;
+import com.example.trieuphu2020.ScoreSaveLoad;
 import com.example.trieuphu2020.common.OnActionCallback;
 import com.example.trieuphu2020.databases.entities.QuestionEntity;
 import com.example.trieuphu2020.databases.entities.QuestionManager;
@@ -220,7 +220,7 @@ public class M002_PlayActivity extends AppCompatActivity implements View.OnClick
         btSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                listUser = ScoreSetGet.getInstance().getData(KEY_SCORE);
+                listUser = ScoreSaveLoad.getInstance().getData(KEY_SCORE);
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -231,7 +231,7 @@ public class M002_PlayActivity extends AppCompatActivity implements View.OnClick
                             listUser.add(new User(name, level));
                             sortDecrease(listUser);
                             for (int i = 0; i < listUser.size(); i++) {
-                                ScoreSetGet.getInstance().saveData(KEY_SCORE, listUser);
+                                ScoreSaveLoad.getInstance().saveData(KEY_SCORE, listUser);
                             }
                         }
                         finish();
@@ -331,7 +331,7 @@ public class M002_PlayActivity extends AppCompatActivity implements View.OnClick
             confirm.show();
         } else {
             level++;
-            tvScore.setText(getScore(level+1));
+            tvScore.setText(ScoreRule.getInstance().getScore(level));
             resetTimer();
             new Handler().postDelayed(new Runnable() {
                 @Override
@@ -352,65 +352,6 @@ public class M002_PlayActivity extends AppCompatActivity implements View.OnClick
         } else if (trueCase == 4) {
             tvCaseD.setBackgroundResource(R.drawable.bg_green_corner_30);
         }
-    }
-
-    public String getScore(int level) {
-        String score = "";
-        switch (level) {
-            case 1:
-                score = convertFormat(100000);
-                break;
-            case 2:
-                score = convertFormat(200000);
-                break;
-            case 3:
-                score = convertFormat(300000);
-                break;
-            case 4:
-                score = convertFormat(500000);
-                break;
-            case 5:
-                score = convertFormat(1000000);
-                break;
-            case 6:
-                score = convertFormat(2000000);
-                break;
-            case 7:
-                score = convertFormat(3000000);
-                break;
-            case 8:
-                score = convertFormat(5000000);
-                break;
-            case 9:
-                score = convertFormat(10000000);
-                break;
-            case 10:
-                score = convertFormat(15000000);
-                break;
-            case 11:
-                score = convertFormat(20000000);
-                break;
-            case 12:
-                score = convertFormat(30000000);
-                break;
-            case 13:
-                score = convertFormat(50000000);
-                break;
-            case 14:
-                score = convertFormat(70000000);
-                break;
-            case 15:
-                score = convertFormat(100000000);
-                break;
-        }
-        return score;
-    }
-
-    private String convertFormat(int score) {
-        NumberFormat format = NumberFormat.getCurrencyInstance();
-        format.setMaximumFractionDigits(0);
-        format.setCurrency(Currency.getInstance("USD"));
-        return format.format(score);
     }
 
     private void countTimer() {

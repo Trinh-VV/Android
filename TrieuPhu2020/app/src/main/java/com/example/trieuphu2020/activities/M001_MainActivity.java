@@ -15,7 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.trieuphu2020.dialog.highscore.HighScoreAdapter;
 import com.example.trieuphu2020.R;
-import com.example.trieuphu2020.ScoreSetGet;
+import com.example.trieuphu2020.ScoreSaveLoad;
 import com.example.trieuphu2020.dialog.highscore.User;
 
 import java.util.List;
@@ -64,7 +64,7 @@ public class M001_MainActivity extends AppCompatActivity implements View.OnClick
             }
         });
 
-        List<User> data = ScoreSetGet.getInstance().getData(M002_PlayActivity.KEY_SCORE);
+        List<User> data = ScoreSaveLoad.getInstance().getData(M002_PlayActivity.KEY_SCORE);
         RecyclerView recyclerView = dialog.findViewById(R.id.rcv_score);
         HighScoreAdapter adapterRCV = new HighScoreAdapter(this);
         adapterRCV.setData(data);
