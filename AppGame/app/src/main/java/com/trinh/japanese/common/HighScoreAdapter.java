@@ -1,4 +1,4 @@
-package com.trinh.japanese.dialog.highscore;
+package com.trinh.japanese.common;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -10,7 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.trinh.japanese.R;
-import com.trinh.japanese.common.ScoreRule;
+import com.trinh.japanese.entities.User;
+
 import java.util.List;
 
 public class HighScoreAdapter extends RecyclerView.Adapter<HighScoreAdapter.ScoreViewHolder> {
@@ -31,7 +32,6 @@ public class HighScoreAdapter extends RecyclerView.Adapter<HighScoreAdapter.Scor
     public ScoreViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(mContext)
                 .inflate(R.layout.item_highscore, parent, false);
-
         return new ScoreViewHolder(view);
     }
 

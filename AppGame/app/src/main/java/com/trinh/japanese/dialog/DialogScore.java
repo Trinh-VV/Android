@@ -11,8 +11,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.trinh.japanese.R;
 import com.trinh.japanese.entities.OnActionCallback;
-import com.trinh.japanese.dialog.highscore.HighScoreAdapter;
-import com.trinh.japanese.dialog.highscore.User;
+import com.trinh.japanese.common.HighScoreAdapter;
+import com.trinh.japanese.entities.User;
 
 import java.util.List;
 

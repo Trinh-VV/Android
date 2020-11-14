@@ -13,8 +13,8 @@ import com.trinh.japanese.R;
 import com.trinh.japanese.ScoreSaveLoad;
 import com.trinh.japanese.activities.M001_MainAct;
 import com.trinh.japanese.activities.M003_MainAct_Game;
-import com.trinh.japanese.dialog.highscore.HighScoreAdapter;
-import com.trinh.japanese.dialog.highscore.User;
+import com.trinh.japanese.common.HighScoreAdapter;
+import com.trinh.japanese.entities.User;
 
 import java.util.List;
 

@@ -1,34 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:padding="@dimen/d_50"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/d_50">
 
     <com.wajahatkarim3.easyflipview.EasyFlipView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:flipOnTouch="true"
-        app:flipEnabled="true"
-        app:flipDuration="400"
-        app:flipFrom="right"
-        app:flipType="horizontal"
         app:autoFlipBack="false"
-        >
+        app:flipDuration="400"
+        app:flipEnabled="true"
+        app:flipFrom="right"
+        app:flipOnTouch="true"
+        app:flipType="horizontal">
 
-        <!-- Back Layout Goes Here -->
         <TextView
             android:id="@+id/tv_mt"
             android:layout_width="match_parent"
-            android:background="@color/red"
-            android:layout_height="@dimen/d_250"/>
+            android:layout_height="@dimen/d_250"
+            android:background="@drawable/bg_blue_corner_30" />
+
         <TextView
             android:id="@+id/tv_ms"
             android:layout_width="match_parent"
-            android:background="@color/green"
-            android:layout_height="@dimen/d_250"/>
-
+            android:layout_height="@dimen/d_250"
+            android:background="@drawable/bg_orange_corner_30" />
 
 
     </com.wajahatkarim3.easyflipview.EasyFlipView>

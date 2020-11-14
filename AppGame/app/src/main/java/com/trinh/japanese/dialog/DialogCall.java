@@ -12,7 +12,7 @@ import com.trinh.japanese.entities.OnActionCallback;
 
 
 public class DialogCall extends Dialog implements View.OnClickListener {
-    private static final int KEY_CALL = 103;
+    private static final int KEY_HELP_CALL = 103;
     private TextView tvTrueCase;
     private int trueKey;
     private OnActionCallback callback;
@@ -36,6 +36,6 @@ public class DialogCall extends Dialog implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         dismiss();
-        callback.callBack(KEY_CALL,null);
+        callback.callBack(KEY_HELP_CALL,null);
     }
 }

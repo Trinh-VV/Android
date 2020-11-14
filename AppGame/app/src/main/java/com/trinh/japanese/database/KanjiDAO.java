@@ -2,14 +2,11 @@ package com.trinh.japanese.database;
 
 import androidx.room.Dao;
 import androidx.room.Query;
-
 import com.trinh.japanese.entities.KanjiEntity;
-
 import java.util.List;
 
 @Dao
 public interface KanjiDAO {
-    int x = 0;
     @Query("SELECT * FROM Kanji")
     List<KanjiEntity> getAllKanji();
 

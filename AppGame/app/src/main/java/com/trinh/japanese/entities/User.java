@@ -1,4 +1,4 @@
-package com.trinh.japanese.dialog.highscore;
+package com.trinh.japanese.entities;
 
 public class User {
     public String username;

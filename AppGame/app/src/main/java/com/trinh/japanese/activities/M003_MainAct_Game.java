@@ -25,7 +25,7 @@ import com.trinh.japanese.dialog.DialogAudience;
 import com.trinh.japanese.dialog.DialogCall;
 import com.trinh.japanese.dialog.DialogConfirm;
 import com.trinh.japanese.dialog.DialogStop;
-import com.trinh.japanese.dialog.highscore.User;
+import com.trinh.japanese.entities.User;
 import com.trinh.japanese.entities.QuestionEntity;
 import com.trinh.japanese.database.QuestionManager;
 
@@ -48,10 +48,6 @@ public class M003_MainAct_Game extends AppCompatActivity implements View.OnClick
     private boolean isTimerRunning;
     private List<User> listUser;
     private boolean isStart;
-
-    public int getLevel() {
-        return level;
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -238,45 +234,37 @@ public class M003_MainAct_Game extends AppCompatActivity implements View.OnClick
         edtScore = dialog.findViewById(R.id.edt_savescore);
         Button btSave = dialog.findViewById(R.id.bt_save);
         Button btGetout = dialog.findViewById(R.id.bt_getout);
-        btSave.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                listUser = ScoreSaveLoad.getInstance().getData(KEY_SCORE);
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        String name = edtScore.getText().toString();
-                        if (name == null) {
-                            return;
-                        } else {
-                            listUser.add(new User(name, level));
-                            sortDecrease(listUser);
-                            for (int i = 0; i < listUser.size(); i++) {
-                                ScoreSaveLoad.getInstance().saveData(KEY_SCORE, listUser);
-                            }
+        btSave.setOnClickListener(view -> {
+            listUser = ScoreSaveLoad.getInstance().getData(KEY_SCORE);
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    String name = edtScore.getText().toString();
+                    if (name == null) {
+                        return;
+                    } else {
+                        listUser.add(new User(name, level));
+                        sortUser(listUser);
+                        for (int i = 0; i < listUser.size(); i++) {
+                            ScoreSaveLoad.getInstance().saveData(KEY_SCORE, listUser);
                         }
-                        finish();
                     }
-                }, 500);
-            }
+                    finish();
+                }
+            }, 500);
         });
-        btGetout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
+        btGetout.setOnClickListener(view -> finish());
         dialog.show();
     }
 
-    private void sortDecrease(List<User> listUser) {
-        Comparator<User> sortDecre = new Comparator<User>() {
+    private void sortUser(List<User> listUser) {
+        Comparator<User> sort = new Comparator<User>() {
             @Override
             public int compare(User user1, User user2) {
                 return user2.getUserScore() - user1.getUserScore();
             }
         };
-        Collections.sort(listUser, sortDecre);
+        Collections.sort(listUser, sort);
         if (listUser.size() > 10) {
             listUser.remove(10);
         }

@@ -27,6 +27,7 @@ public class KanjiManager {
             }
         }.start();
     }
+
   public void getListKanjiByLevel(final OnHSCallBack cb, int level) {
         new Thread() {
             @Override
@@ -39,8 +40,6 @@ public class KanjiManager {
             }
         }.start();
     }
-
-
 
     public interface OnHSCallBack {
         void callBack(Object data);

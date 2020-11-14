@@ -24,7 +24,6 @@ public class M002_MainAct_Flash_Kanj extends AppCompatActivity implements View.O
     private FoldingCell foldingCell;
     int count = 0;
 
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,7 +55,6 @@ public class M002_MainAct_Flash_Kanj extends AppCompatActivity implements View.O
                 count=0;
                 setContent();
             }
-
         }
     }
 
@@ -72,25 +70,17 @@ public class M002_MainAct_Flash_Kanj extends AppCompatActivity implements View.O
         Intent intent = getIntent();
         int level = intent.getIntExtra(M001FlashFragment.KEY_FLASH, 10);
         tvTopic.setText("HÁN TỰ N" + level);
-        KanjiManager.getInstance().getListKanjiByLevel(new KanjiManager.OnHSCallBack() {
-            @Override
-            public void callBack(Object data) {
-                listKanji = (List<KanjiEntity>) data;
-            }
-        }, level);
+        KanjiManager.getInstance().getListKanjiByLevel(
+                data -> listKanji = (List<KanjiEntity>) data, level);
 
-
-        KanjiManager.getInstance().getKanjiById(new KanjiManager.OnHSCallBack() {
-            @Override
-            public void callBack(Object data) {
-                if (data == null) {
-                    return;
-                }
-                KanjiEntity kanjiEntity = (KanjiEntity) data;
-                String be = unescape(kanjiEntity.getBefore());
-                tvAfter.setText(kanjiEntity.getAfter());
-                tvBefore.setText(be);
+        KanjiManager.getInstance().getKanjiById(data -> {
+            if (data == null) {
+                return;
             }
+            KanjiEntity kanjiEntity = (KanjiEntity) data;
+            String be = unescape(kanjiEntity.getBefore());
+            tvAfter.setText(kanjiEntity.getAfter());
+            tvBefore.setText(be);
         }, level);
     }
 

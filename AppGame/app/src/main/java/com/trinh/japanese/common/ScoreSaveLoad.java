@@ -6,7 +6,7 @@ import android.content.SharedPreferences;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.trinh.japanese.entities.App;
-import com.trinh.japanese.dialog.highscore.User;
+import com.trinh.japanese.entities.User;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
