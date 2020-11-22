@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">AppGame</string>
-    <string name="home">Home</string>
-    <string name="android">Android</string>
-    <string name="search">Search</string>
-    <string name="kanji">2136 hán tự</string>
-    <string name="game">Game JLPT</string>
-    <string name="abc">ABC</string>
-</resources>
