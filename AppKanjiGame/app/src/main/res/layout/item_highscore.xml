@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    android:padding="2dp"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_marginStart="@dimen/d_15"
+        android:layout_marginEnd="@dimen/d_15"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_30"
+        android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_gravity="center"
+        android:text="user name"
+        android:textColor="@color/orange"
+        android:padding="5dp"
+        android:textSize="@dimen/d_16"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tv_score"
+        android:layout_gravity="center"
+        android:text="score"
+        android:textColor="@color/orange"
+        android:paddingTop="@dimen/d_5"
+        android:layout_weight="1"
+        android:textSize="@dimen/d_16"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    <View
+        android:background="@color/orange"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+
+</LinearLayout>

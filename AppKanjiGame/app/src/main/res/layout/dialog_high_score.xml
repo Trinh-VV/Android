@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="#1A000000"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="@dimen/d_250"
+        android:layout_height="420dp"
+        android:background="@drawable/bg_blue_corner"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="@dimen/d_5"
+            android:layout_alignParentTop="true"
+            android:id="@+id/tv_tittle_dialog_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Điểm cao"
+            android:textColor="@color/white"
+            android:textSize="@dimen/d_20"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="350dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_highscore" />
+        </LinearLayout>
+
+        <Button
+            android:layout_gravity="center_horizontal"
+            android:layout_alignBottom="@id/tv_tittle_dialog_confirm"
+            android:id="@+id/bt_highscore_close"
+            android:layout_width="@dimen/d_100"
+            android:text="ĐÓNG"
+            android:textSize="@dimen/d_15"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_circle"
+            android:layout_height="@dimen/d_30"/>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ln_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:background="@color/bgColor"
+    android:clipToPadding="false"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tv_topic"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/d_20"
+        android:layout_width="wrap_content"
+        android:text="HÁN TỰ N"
+        android:textStyle="bold"
+        android:textSize="@dimen/d_35"
+        android:layout_height="wrap_content"/>
+    <com.ramotion.foldingcell.FoldingCell xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/folding_cell"
+        android:layout_marginTop="@dimen/d_100"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:id="@+id/cell_after"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_green_dark"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_mean"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:gravity="center"
+                android:text="mean"
+                android:textSize="@dimen/d_50" />
+        </FrameLayout>
+        ​
+        <FrameLayout
+            android:id="@+id/cell_before"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_kanji"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@android:color/holo_blue_dark"
+                android:gravity="center"
+                android:text="心"
+                android:textSize="@dimen/d_100" />
+        </FrameLayout>
+    </com.ramotion.foldingcell.FoldingCell>
+
+
+    <Button
+        android:layout_marginBottom="@dimen/d_30"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
+        android:id="@+id/bt_next_Kanji"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_blue_corner_30"
+        android:layout_width="@dimen/d_150"
+        android:layout_height="@dimen/d_50"
+        android:textColor="@color/white"
+        android:text="Next"
+        android:layout_marginTop="450dp"
+        android:textSize="25dp" />
+
+    <TextView
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="530dp"
+        android:textSize="@dimen/d_30"
+        android:textStyle="bold"
+        android:textColor="@color/teal_700"
+        android:layout_marginBottom="@dimen/d_30"
+        android:layout_alignParentTop="true"
+        android:text="きみなら、できるよ！"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+
+</RelativeLayout>

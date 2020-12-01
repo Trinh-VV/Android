@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#b0bec5"
+    android:orientation="vertical"
+    android:padding="@dimen/d_15">
+
+    <TextView
+        android:id="@+id/tv_vidu"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_35"
+        android:autoSizeMaxTextSize="20sp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center|bottom"
+        android:text=""
+        android:textColor="@color/red" />
+
+    <TextView
+        android:id="@+id/tv_dich"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d_35"
+        android:autoSizeMaxTextSize="20sp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:text="Hãy chọn bài học ở menu bên dưới!"
+        android:textColor="@color/black" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.wajahatkarim3.easyflipview.EasyFlipView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/d_40"
+            android:layout_marginTop="@dimen/d_10"
+            android:layout_marginEnd="@dimen/d_40"
+            app:autoFlipBack="false"
+            app:flipDuration="400"
+            app:flipEnabled="true"
+            app:flipFrom="right"
+            app:flipOnTouch="true"
+            app:flipType="horizontal">
+
+            <TextView
+                android:id="@+id/tv_nghia_tu_vung"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d_250"
+                android:background="@drawable/bg_flash"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/d_30" />
+
+            <TextView
+                android:id="@+id/tv_tu_vung"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/d_250"
+                android:autoSizeMaxTextSize="70sp"
+                android:autoSizeMinTextSize="35sp"
+                android:autoSizeTextType="uniform"
+                android:background="@drawable/bg_flash"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white" />
+        </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="245dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_save_list"
+                android:layout_width="@dimen/d_90"
+                android:layout_height="@dimen/d_35"
+                android:background="@drawable/bg_blue_corner_30"
+                android:text="SAVE"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/bt_remove_list"
+                android:layout_width="@dimen/d_90"
+                android:layout_height="@dimen/d_35"
+                android:layout_marginStart="@dimen/d_10"
+                android:background="@drawable/bg_blue_corner_30"
+                android:text="Remove"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/sw_random"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/d_20"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/d_15"
+        android:text="Random"
+        android:textSize="@dimen/d_16" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d_10"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TableRow
+            android:id="@+id/bt_back"
+            android:layout_width="@dimen/d_100"
+            android:layout_height="@dimen/d_30"
+            android:background="@drawable/bg_flash"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/d_20"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_back"
+                app:tint="@color/white" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="BACK"
+                android:textColor="@color/white"
+                android:textSize="@dimen/d_20"
+                android:textStyle="bold" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/bt_next"
+            android:layout_width="@dimen/d_100"
+            android:layout_height="@dimen/d_30"
+            android:layout_marginStart="@dimen/d_20"
+            android:background="@drawable/bg_flash"
+            android:gravity="center">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="NEXT "
+                android:textColor="@color/white"
+                android:textSize="@dimen/d_20"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="@dimen/d_20"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_next"
+                app:tint="@color/white" />
+        </TableRow>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="@dimen/d_80"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:background="@color/red"
+            app:cardCornerRadius="@dimen/d_10"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:id="@+id/ln_list_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d_25"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@color/red"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/d_18" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/d_45"
+                    android:background="@drawable/bg_flash"
+                    android:gravity="center"
+                    android:text="List\nSaved"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/d_16" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcv_lession"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</LinearLayout>

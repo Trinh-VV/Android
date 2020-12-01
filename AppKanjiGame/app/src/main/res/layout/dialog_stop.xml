@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="#1A000000"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="@dimen/d_250"
+        android:layout_height="@dimen/d_200"
+        android:background="@drawable/bg_circle"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:paddingStart="@dimen/d_20"
+            android:paddingEnd="@dimen/d_20"
+            android:id="@+id/tv_tittle_dialog_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Bạn muốn dừng cuộc chơi?"
+            android:textColor="@color/white"
+            android:textSize="@dimen/d_20"
+             />
+
+        <TextView
+            android:id="@+id/tv_content_dialog_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d_15"
+            android:gravity="center"
+            android:text="XN?"
+            android:textColor="@color/black"
+            android:textSize="@dimen/d_20"
+            android:visibility="gone" />
+
+        <TableRow
+            android:weightSum="2"
+            android:layout_marginTop="@dimen/d_15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/d_15">
+
+            <Button
+                android:id="@+id/bt_yes_stop"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_blue_corner"
+                android:text="Có"
+                android:textColor="@color/white"
+                android:textSize="@dimen/d_15" />
+
+            <Button
+                android:id="@+id/bt_getout"
+                android:layout_width="@dimen/d_100"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/d_10"
+                android:layout_weight="1"
+                android:background="@drawable/bg_blue_corner"
+                android:text="Không"
+                android:textColor="@color/white"
+                android:textSize="@dimen/d_15" />
+        </TableRow>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
