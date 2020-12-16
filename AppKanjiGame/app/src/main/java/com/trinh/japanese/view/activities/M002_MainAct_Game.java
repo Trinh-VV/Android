@@ -54,7 +54,7 @@ public class M002_MainAct_Game extends AppCompatActivity implements View.OnClick
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.m002_activity_play);
+        setContentView(R.layout.m002_activity_game);
         initViews();
         initData();
     }

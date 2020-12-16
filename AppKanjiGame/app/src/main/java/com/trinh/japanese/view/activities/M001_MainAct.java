@@ -21,7 +21,7 @@ public class M001_MainAct extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.m001_act_home);
+        setContentView(R.layout.m001_activity_home);
         initView();
     }
 

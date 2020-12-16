@@ -1,80 +1,71 @@
 package com.trinh.japanese.view.fragment;
 
-import android.app.Dialog;
-import android.content.Intent;
+import android.content.Context;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.trinh.japanese.R;
-import com.trinh.japanese.view.activities.M001_MainAct;
-import com.trinh.japanese.view.activities.M003_MainAct_Flash_Kanj;
+import com.trinh.japanese.api.ApiService2;
+import com.trinh.japanese.common.WordAdapter;
+import com.trinh.japanese.model.Word;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class M003FlashFragment extends Basefragment {
     public static final String TAG = M003FlashFragment.class.getName();
-    public static final String KEY_N1 = "KEY_N1";
-    public static final String KEY_N2 = "KEY_N2";
-    public static final String KEY_N3 = "KEY_N3";
-    public static final String KEY_N4 = "KEY_N4";
-    public static final String KEY_N5 = "KEY_N5";
-    public static final String KEY_FLASH = "KEY_FLASH";
-    public static Dialog dialog;
+    private EditText editWord;
+    private RecyclerView rcvWord;
+    private WordAdapter wordAdapter;
 
 
     protected void initView() {
-        findViewById(R.id.bt_n1,this);
-        findViewById(R.id.bt_n2,this);
-        findViewById(R.id.bt_n3,this);
-        findViewById(R.id.bt_n4,this);
-        findViewById(R.id.bt_n5,this);
-        initData();
-    }
-
-    private void handleClickView(int idView) {
+        editWord = findViewById(R.id.edt_search);
+        findViewById(R.id.bt_search).setOnClickListener(this);
+        rcvWord = findViewById(R.id.rcv_word);
+        wordAdapter = new WordAdapter(getContext());
     }
 
     @Override
     protected int getLayoutId() {
-        return R.layout.frg_m003_menu_kanji;
+        return R.layout.frg_m003_dictionary;
     }
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.bt_n1:
-                showFlash(KEY_FLASH, 1);
-                break;
-            case R.id.bt_n2:
-                showFlash(KEY_FLASH, 2);
-                break;
-            case R.id.bt_n3:
-                showFlash(KEY_FLASH, 3);
-                break;
-            case R.id.bt_n4:
-                showFlash(KEY_FLASH, 4);
-                break;
-            case R.id.bt_n5:
-                showFlash(KEY_FLASH, 5);
-                break;
+        clickCallApi();
+    }
+
+
+    private void clickCallApi() {
+        String keySearch = editWord.getText().toString();
+        if (editWord.getText() == null) {
+            return;
         }
+        ApiService2.apiService.getWordByKey(keySearch).enqueue(new Callback<List<Word>>() {
+            @Override
+            public void onResponse(Call<List<Word>> call, Response<List<Word>> response) {
+                Toast.makeText(getContext(), "Success"+response.body().size(), Toast.LENGTH_LONG).show();
+                List<Word> listWord = response.body();
+                wordAdapter.setData(listWord);
+                LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(),RecyclerView.VERTICAL,false);
+                rcvWord.setLayoutManager(linearLayoutManager);
+                rcvWord.setAdapter(wordAdapter);
+            }
 
+            @Override
+            public void onFailure(Call<List<Word>> call, Throwable t) {
+                Toast.makeText(getContext(), "fail", Toast.LENGTH_SHORT).show();
+
+            }
+        });
     }
-
-    private void showFlash(String keyN, int i) {
-        Intent intent = new Intent();
-        intent.setClass(getActivity(), M003_MainAct_Flash_Kanj.class);
-        intent.putExtra(keyN, i);
-        startActivity(intent);
-    }
-
-    @Override
-    public void backToPrevious() {
-        if (sourceTag.equals(M001GameFrament.TAG)) {
-            //do nothing
-        } else if (sourceTag.equals(M001_MainAct.TAG)) {
-            callBack.closeApp();
-        }
-    }
-
-    private void initData() {
-  }
 }
 

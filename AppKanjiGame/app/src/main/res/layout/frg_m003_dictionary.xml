@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/edt_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:hint="Search"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/bt_search"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/d_10"
+        android:background="@color/design_default_color_secondary_variant"
+        android:text="調べる"
+        android:textColor="@color/white"
+        android:textSize="@dimen/d_25" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_word"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/d_25" />
+
+</LinearLayout>
